@@ -1,0 +1,26 @@
+using System;
+
+namespace CountDiv
+{
+    class CountDiv
+  {
+        static int solution(int A, int B, int K)
+    {
+      int Ucount = B / K;
+
+      int Lcount = A > 0? (A - 1) / K: 0;
+      if (A == 0)
+        Ucount++;
+      int result = Ucount - Lcount;
+
+      return result;
+    }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+      Console.WriteLine(solution(0, 1, 2));
+      Console.ReadLine();
+
+        }
+    }
+}
